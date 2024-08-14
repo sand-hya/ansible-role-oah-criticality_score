@@ -77,7 +77,7 @@
 
 - name: Install criticality_score if not already installed
   become: yes
-  command: go install github.com/ossf/criticality_score/v2/cmd/criticality_score@"{{ criticality_score_version }}"
+  command: go install github.com/ossf/criticality_score/v2/cmd/criticality_score@latest
   when: not criticality_file.stat.exists
 
 
